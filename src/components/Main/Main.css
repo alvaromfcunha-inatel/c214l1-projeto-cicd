@@ -1,0 +1,86 @@
+#root {
+  font-family: 'Courier New', Courier, monospace;
+
+  max-width: 1280px;
+  margin: auto auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+
+.card.card-borderless {
+  border-bottom: unset;
+}
+
+.card label {
+  font-size: larger;
+  margin-bottom: 1rem;
+}
+
+.card input {
+  margin-bottom: 1rem;
+  font-size: larger;
+  color: black;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.card textarea {
+  font-size: larger;
+  color: black;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.card button {
+  background-color: grey;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card .card-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.card .card-header span {
+  font-size: larger;
+  flex: 9;
+}
+
+.card .card-header button {
+  flex: 1;
+}
+
+.card .card-item {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dotted grey;
+  border-top: 1px dotted grey;
+}
+
+.card .card-item label {
+  font-size: medium;
+}
+
+.card .card-item input {
+  font-size: medium;
+}
+
+.card .card-item textarea {
+  font-size: medium;
+  min-height: 5rem;
+}
+
+.footer {
+  color: #888;
+}
