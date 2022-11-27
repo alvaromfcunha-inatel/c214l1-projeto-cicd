@@ -1,30 +1,45 @@
-import React, { ReactNode, useState } from 'react'
+import React, { createContext, ReactNode, useContext, useState } from 'react'
 import './Main.css'
 
 function Main() {
-  const initialSlideList: ReactNode[] = []
-
-  const [slideList, setSlideList] = useState(initialSlideList)
-
   const [title, setTitle] = useState('')
   const [ending, setEnding] = useState('')
-  const [slides, setSlides] = useState([])
 
-  function SlideField(props: { id: string }) {
+  const initialSlides: { ref: React.RefObject<any>, node: ReactNode }[] = []
+  const [slides, setSlides] = useState(initialSlides)
+
+  const SlideField = React.forwardRef((_, ref) => {
+    const [description, setDescription] = useState('')
+    const [content, setContent] = useState('')
+
+    React.useImperativeHandle(ref, () => ({
+      getSlideInfo: () => {
+        return { description, content }
+      }
+    }))
+
     return (
-      <div className="card-item" id={"slide-" + props.id}>
+      <div className="card-item">
         <label>Título do Slide:</label>
-        <input name="slide-title"></input>
+        <input name="slide-title" onChange={handleChange(setDescription)}></input>
         <label>Conteúdo:</label>
-        <textarea name="slide-content"></textarea>
+        <textarea name="slide-content" onChange={handleChange(setContent)}></textarea>
       </div>
     )
-  }
+  })
 
   const addSlide = () => {
-    const id = String(slideList.length + 1)
-    const slide = <SlideField id={id} />
-    setSlideList([...slideList, slide])
+    const index = slides.length
+    const ref = React.createRef()
+    const node = <SlideField ref={ref} key={index} />
+
+    setSlides([...slides, { ref, node }])
+  }
+
+  const createSlideshow = () => {
+    console.log('title:', title)
+    console.log('ending:', ending)
+    slides.map(({ ref }, index) => console.log(`slide ${index}:`, ref.current.getSlideInfo()))
   }
 
   const handleChange = (setter: any) => (event: any) => {
@@ -46,17 +61,17 @@ function Main() {
           <button onClick={addSlide}>Add</button>
         </div>
 
-        {slideList}
+        {slides.map(slide => slide.node)}
 
       </div>
 
       <div className="card">
         <label>Final da Apresentação:</label>
-        <input name="presentation-ending"></input>
+        <input name="presentation-ending" onChange={handleChange(setEnding)}></input>
       </div>
-      
+
       <div className="card card-borderless">
-        <button>Criar</button>
+        <button onClick={createSlideshow}>Criar</button>
       </div>
 
       <p className="footer">
