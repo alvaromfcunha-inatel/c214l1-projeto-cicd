@@ -1,6 +1,8 @@
 import { ReactNode, useState, forwardRef, useImperativeHandle, createRef, RefObject } from 'react'
 import './Main.css'
 
+import { jsPDF } from 'jspdf'
+
 function Main() {
   const [title, setTitle] = useState('')
   const [ending, setEnding] = useState('')
@@ -37,9 +39,18 @@ function Main() {
   }
 
   const createSlideshow = () => {
-    console.log('title:', title)
-    console.log('ending:', ending)
-    slides.map(({ ref }, index) => console.log(`slide ${index}:`, ref.current.getSlideInfo()))
+    const slideInfos = slides.map(({ ref }) => ref.current.getSlideInfo())
+
+    const pdf = new jsPDF()
+    pdf.text(title, 10, 10)
+    pdf.addPage()
+    slideInfos.map(({ description, content }) => {
+      pdf.text(description, 10, 10)
+      pdf.text(content, 10, 30)
+      pdf.addPage()
+    })
+    pdf.text(ending, 10, 10)
+    pdf.save('slideshow.pdf')
   }
 
   const handleChange = (setter: any) => (event: any) => {
