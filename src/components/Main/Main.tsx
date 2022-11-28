@@ -1,25 +1,25 @@
-import React, { createContext, ReactNode, useContext, useState } from 'react'
+import { ReactNode, useState, forwardRef, useImperativeHandle, createRef, RefObject } from 'react'
 import './Main.css'
 
 function Main() {
   const [title, setTitle] = useState('')
   const [ending, setEnding] = useState('')
 
-  const initialSlides: { ref: React.RefObject<any>, node: ReactNode }[] = []
+  const initialSlides: { ref: RefObject<any>, node: ReactNode }[] = []
   const [slides, setSlides] = useState(initialSlides)
 
-  const SlideField = React.forwardRef((_, ref) => {
+  const SlideField = forwardRef((props: { id: string }, ref) => {
     const [description, setDescription] = useState('')
     const [content, setContent] = useState('')
 
-    React.useImperativeHandle(ref, () => ({
+    useImperativeHandle(ref, () => ({
       getSlideInfo: () => {
         return { description, content }
       }
     }))
 
     return (
-      <div className="card-item">
+      <div className="card-item" data-testid={props.id}>
         <label>Título do Slide:</label>
         <input name="slide-title" onChange={handleChange(setDescription)}></input>
         <label>Conteúdo:</label>
@@ -30,8 +30,8 @@ function Main() {
 
   const addSlide = () => {
     const index = slides.length
-    const ref = React.createRef()
-    const node = <SlideField ref={ref} key={index} />
+    const ref = createRef()
+    const node = <SlideField ref={ref} key={index} id={`slide-${index}`} />
 
     setSlides([...slides, { ref, node }])
   }
