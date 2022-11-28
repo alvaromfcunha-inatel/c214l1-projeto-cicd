@@ -31,7 +31,7 @@ test('add one slide successfuly', async () => {
 
   await user.click(slideAddButton)
 
-  const slide = container.querySelector('#slide-1')
+  const slide = await screen.findByTestId('slide-0')
 
   expect(slide).toBeTruthy()
 })
@@ -49,13 +49,13 @@ test('add many slides successfuly', async () => {
   await user.click(slideAddButton)
   await user.click(slideAddButton)
 
-  const slide1 = container.querySelector('#slide-1')
-  const slide2 = container.querySelector('#slide-2')
-  const slide3 = container.querySelector('#slide-3')
-  const slide4 = container.querySelector('#slide-4')
+  const slide0 = await screen.findByTestId('slide-0')
+  const slide1 = await screen.findByTestId('slide-1')
+  const slide2 = await screen.findByTestId('slide-2')
+  const slide3 = await screen.findByTestId('slide-3')
 
+  expect(slide0).toBeTruthy()
   expect(slide1).toBeTruthy()
   expect(slide2).toBeTruthy()
   expect(slide3).toBeTruthy()
-  expect(slide4).toBeTruthy()
 })
