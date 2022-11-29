@@ -51,6 +51,8 @@ npm run dev
 
 ## Como rodar os testes?
 
+### Via linha de comando:
+
 - Ir para o diretorio do repositório:
 ```
 cd c214l1-projeto/
@@ -65,3 +67,13 @@ npm i
 ```
 npm run test
 ```
+
+### Via *vscode*:
+
+- No *vscode* pressionar o atalho `Ctrl+Shift+X`. O menu de *Extensions* vai aparecer no *sidebar*;
+
+- Procurar pela extensão `Orta.vscode-jest`;
+
+- Instalar a extensão que aparecer, com nome `Jest`;
+
+- Assim que a extensão instalar ir no menu de *Testing* do *sidebar*.
