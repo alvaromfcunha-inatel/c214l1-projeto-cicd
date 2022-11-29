@@ -1,25 +1,67 @@
-# C214 L1 - Projeto
+# C214 L1 - Projeto - Nome do projeto?
 
-## Como rodar?
+## Pré-requisitos:
 
-### Pré-requisitos:
+- *node* v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
+- *npm* v8.15 ou superior.
 
-- Node v16.17 ou superior;
-- Npm v8.15 ou superior;
-
-### Passo a passo:
+## Como rodar a aplicação?
 
 - Ir para o diretorio do repositório:
-  ```
-  cd c214l1-projeto/
-  ```
+```
+cd c214l1-projeto/
+```
 
-- Instalar dependencias do Node:
-  ```
-  npm i
-  ```
+- Instalar dependencias do *node*:
+```
+npm i
+```
 
 - Startar o servidor web:
-  ```
-  npm run dev
-  ```
+```
+npm run dev
+```
+
+## Como *debuggar* a aplicação via *vscode*:
+
+- No *vscode* pressionar o atalho `Ctrl+Shift+D`. O menu de *Run and Debug* vai aparecer no *sidebar*;
+
+- Clicar em `create a launch.json file`;
+
+- Colar esse `json` e salvar o arquivo:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "", // Escolher um navegador instalado em sua maquina ('chrome', 'firefox', etc.).
+      "request": "launch",
+      "name": "react debugging",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src",
+    }
+  ]
+}
+```
+
+- Assegurar que a **aplicação ja esta rodando**!
+
+- Pressionar `F5` para começar o `debugger`.
+
+## Como rodar os testes?
+
+- Ir para o diretorio do repositório:
+```
+cd c214l1-projeto/
+```
+
+- Instalar dependencias do *node*:
+```
+npm i
+```
+
+- Rodar os testes:
+```
+npm run test
+```
