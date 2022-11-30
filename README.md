@@ -39,6 +39,17 @@ npm i
 npm run dev
 ```
 
+- Após o comando anterior, para acessar o FormPDF, acessar o local:
+```
+localhost:5173
+```
+
+- Caso alguma dependências esteja dando erro, verificar na pasta node_modules se esta foi instalada e verificar a lista de dependências do npm, utilizando o terminal com o comando:
+```
+npm list
+```
+Outra possibilidade também, caso esteja utilizando o vscode, é reiniciá-lo.
+
 ### :yellow_circle: Como realizar o *debug* da aplicação utilizando a IDE *vscode*:
 
 - No *vscode*, pressionar o atalho `Ctrl+Shift+D`. O menu de *Run and Debug* vai aparecer no *sidebar*;
@@ -104,7 +115,7 @@ npm run test
 
 ### :gear: Funcionamento
 
-O FormPDF é composto por um formulário, onde o usuário irá fornecer as informações que deseja acrescentar em cada parte da apresentação. Essa apresentação é dividida em 3 etapas:
+O FormPDF é composto por um formulário, onde o usuário irá fornecer as informações que deseja acrescentar em cada parte da apresentação. Esse formulário é dividido em 3 partes:
 
   1. **Slide Inicial**: título da apresentação;
   
@@ -112,12 +123,31 @@ O FormPDF é composto por um formulário, onde o usuário irá fornecer as infor
   
   3. **Slide Final**: conteúdo de encerramento.
   
-Ao executar o projeto, será apresentado ao usuário um formulário, como apresentado na imagem abaixo.
+Ao executar o projeto e acessar o local do formulário, o mesmo será apresentado ao usuário, como mostrado na imagem abaixo.
 
 <p align="center">
   <img src="formulario.PNG">
 </p>
 
+O primeiro campo que o usuário irá preencher será informando o **título** da apresentação.
+
+<p align="center">
+  <img src="formulario-titulo.PNG">
+</p>
+
+Em seguida, caso tenha slides intermediários, o usuário irá clicar no botão Adicionar para a habilitar os campos de título e conteúdo do referente slide. Para cada slide novo (uma página nova), será preciso clicar no mesmo botão e preencher os campos.
+
+<p align="center">
+  <img src="formulario-slide.PNG">
+</p>
+
+O último campo que o usuário irá preencher será informando o conteúdo de encerramento da apresentação. Por exemplo, um agradecimento.
+
+<p align="center">
+  <img src="formulario-fim.PNG">
+</p>
+
+Por fim, após preencher todas as informações, irá clicar no botão Criar e precisará informar qual o local e nome do arqruivo para salvar o arquivo no formato pdf.
 
 ### :people_holding_hands: Autores
 - Álvaro
