@@ -11,7 +11,11 @@
 <img src="https://img.shields.io/static/v1?label=IDE&message=vscode&color=5f9ea0&style=plastic"/>
 </p>
 
-### :point_right: Pré-requisitos:
+### :speech_balloon: Projeto
+
+FormPDF é um criador de slides que gera o conteúdo da apresentação, informado pelo usuário, em formato PDF.
+
+### :point_right: Pré-requisitos
 
 - *node*: v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
 - *npm*: v8.15 ou superior;
@@ -96,6 +100,8 @@ npm run test
 - TypeScript
 - HTML5
 - CSS
+
+### Funcionamento
 
 ### :people_holding_hands: Autores
 - Álvaro
