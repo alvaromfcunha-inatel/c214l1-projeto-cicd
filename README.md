@@ -17,6 +17,7 @@ FormPDF é um criador de slides que gera o conteúdo da apresentação, informad
 
 ### :point_right: Pré-requisitos
 
+- Baixar o código no formato zip e descompactá-lo ou Clonar o repositório (https://github.com/alvaromfcunha-inatel/c214l1-projeto.git);
 - *node*: v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
 - *npm*: v8.15 ou superior;
 - Editor de sua escolha. Por exemplo, [VSCode](https://code.visualstudio.com/download)
@@ -101,7 +102,22 @@ npm run test
 - HTML5
 - CSS
 
-### Funcionamento
+### :gear: Funcionamento
+
+O FormPDF é composto por um formulário, onde o usuário irá fornecer as informações que deseja acrescentar em cada parte da apresentação. Essa apresentação é dividida em 3 etapas:
+
+  1. **Slide Inicial**: título da apresentação;
+  
+  2. **Conjunto de Slides intermediários**: títulos e conteúdo;
+  
+  3. **Slide Final**: conteúdo de encerramento.
+  
+Ao executar o projeto, será apresentado ao usuário um formulário, como apresentado na imagem abaixo.
+
+<p align="center">
+  <img src="formulario.PNG">
+</p>
+
 
 ### :people_holding_hands: Autores
 - Álvaro
