@@ -1,34 +1,46 @@
-# C214 L1 - Projeto - Nome do projeto?
+<h1 align="center"> C214 - Laboratório </h1>
+<h3 align="center">:books: Projeto: FormPDF </h3>
 
-## Pré-requisitos:
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=License&message=GPL&color=00bfff&style=plastic"/>
 
-- *node* v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
-- *npm* v8.15 ou superior.
+<img src="https://img.shields.io/static/v1?label=LP&message=TypeScript&color=daa520&style=plastic"/>
 
-## Como rodar a aplicação?
+<img src="https://img.shields.io/static/v1?label=GD&message=NodeJS&color=9acd32&style=plastic"/>
 
-- Ir para o diretorio do repositório:
+<img src="https://img.shields.io/static/v1?label=IDE&message=vscode&color=5f9ea0&style=plastic"/>
+</p>
+
+### :point_right: Pré-requisitos:
+
+- *node*: v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
+- *npm*: v8.15 ou superior;
+- Editor de sua escolha. Por exemplo, [VSCode](https://code.visualstudio.com/download)
+
+### :heavy_check_mark: Como executar a aplicação?
+
+- Ir para o diretório do repositório:
 ```
 cd c214l1-projeto/
 ```
 
-- Instalar dependencias do *node*:
+- Instalar as dependências do *node*:
 ```
 npm i
 ```
 
-- Startar o servidor web:
+- Inicializar o servidor web:
 ```
 npm run dev
 ```
 
-## Como *debuggar* a aplicação via *vscode*:
+### :yellow_circle: Como realizar o *debug* da aplicação utilizando a IDE *vscode*:
 
-- No *vscode* pressionar o atalho `Ctrl+Shift+D`. O menu de *Run and Debug* vai aparecer no *sidebar*;
+- No *vscode*, pressionar o atalho `Ctrl+Shift+D`. O menu de *Run and Debug* vai aparecer no *sidebar*;
 
 - Clicar em `create a launch.json file`;
 
-- Colar esse `json` e salvar o arquivo:
+- Copiar e colar o `json` apresentado abaixo e salvar o arquivo:
 
 ```json
 {
@@ -49,31 +61,47 @@ npm run dev
 
 - Pressionar `F5` para começar o `debugger`.
 
-## Como rodar os testes?
+### :lady_beetle::mag: Como executar os testes?
 
-### Via linha de comando:
+#### :one: Via linha de comando:
 
 - Ir para o diretorio do repositório:
 ```
 cd c214l1-projeto/
 ```
 
-- Instalar dependencias do *node*:
+- Instalar as dependências do *node*:
 ```
 npm i
 ```
 
-- Rodar os testes:
+- Executar os testes:
 ```
 npm run test
 ```
 
-### Via *vscode*:
+#### :two: Via *vscode*:
 
-- No *vscode* pressionar o atalho `Ctrl+Shift+X`. O menu de *Extensions* vai aparecer no *sidebar*;
+- No *vscode*, pressionar o atalho `Ctrl+Shift+X`. O menu de *Extensions* vai aparecer no *sidebar*;
 
 - Procurar pela extensão `Orta.vscode-jest`;
 
 - Instalar a extensão que aparecer, com nome `Jest`;
 
-- Assim que a extensão instalar ir no menu de *Testing* do *sidebar*.
+- Assim que a extensão instalar, ir ao menu de *Testing* do *sidebar*.
+
+### :computer: Tecnologias
+
+- Node.js
+- TypeScript
+- HTML5
+- CSS
+
+### :people_holding_hands: Autores
+- Álvaro
+- Andressa
+- Dessana
+- Mariana
+
+### :small_blue_diamond: Licença
+GPL-3.0
