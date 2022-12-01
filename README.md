@@ -17,8 +17,12 @@ FormPDF é um criador de slides que gera o conteúdo da apresentação, informad
 
 ### :point_right: Pré-requisitos
 
-- Baixar o código no formato zip e descompactá-lo ou Clonar o repositório (https://github.com/alvaromfcunha-inatel/c214l1-projeto.git);
-- *node*: v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
+- Baixar o código no formato zip, clicando no botão Code do Repositório e descompactá-lo ou
+- Clonar o repositório, utilizando o terminal Git Bash: 
+``` 
+$ git clone https://github.com/alvaromfcunha-inatel/c214l1-projeto.git
+```
+- [NodeJS](https://nodejs.org/en/download/): v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
 - *npm*: v8.15 ou superior;
 - Editor de sua escolha. Por exemplo, [VSCode](https://code.visualstudio.com/download)
 
@@ -106,6 +110,10 @@ npm run test
 
 - Assim que a extensão instalar, ir ao menu de *Testing* do *sidebar*.
 
+### :orange_circle: Continuous Integration - CI
+
+A Integração Contínua foi implementada, utilizando o GitHub Action, com o workflow referente ao Node.js e as versões citadas no tópico de Pré-Requisitos. Ao clicar em Actions, na barra de opções abaixo do nome do repositório, será possível verificar todas as execuções do workflow.
+
 ### :computer: Tecnologias
 
 - Node.js
@@ -129,7 +137,7 @@ Ao executar o projeto e acessar o local do formulário, o mesmo será apresentad
   <img src="formulario.PNG">
 </p>
 
-O primeiro campo que o usuário irá preencher será informando o **título** da apresentação.
+O primeiro campo que o usuário irá preencher será para informar o **título** da apresentação.
 
 <p align="center">
   <img src="formulario-titulo.PNG">
@@ -141,13 +149,13 @@ Em seguida, caso tenha slides intermediários, o usuário irá clicar no botão 
   <img src="formulario-slide.PNG">
 </p>
 
-O último campo que o usuário irá preencher será informando o conteúdo de encerramento da apresentação. Por exemplo, um agradecimento.
+O último campo que o usuário irá preencher será para informar o **conteúdo** de encerramento da apresentação. Por exemplo, um agradecimento.
 
 <p align="center">
   <img src="formulario-fim.PNG">
 </p>
 
-Por fim, após preencher todas as informações, irá clicar no botão Criar e precisará informar qual o local e nome do arqruivo para salvar o arquivo no formato pdf.
+Por fim, após preencher todas as informações, irá clicar no botão Criar e precisará informar qual o local e nome do arquivo para salvá-lo no formato pdf.
 
 ### :people_holding_hands: Autores
 - Álvaro
