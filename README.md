@@ -52,7 +52,7 @@ localhost:5173
 ```
 npm list
 ```
-Outra possibilidade também, caso esteja utilizando o vscode, é reiniciá-lo.
+- Caso o módulo da dependência não estiver instalada, uma opção é instalá-la utilizando o comando ```npm i <modulo>```. Outra possibilidade também, caso esteja utilizando o vscode, é reiniciá-lo.
 
 ### :yellow_circle: Como realizar o *debug* da aplicação utilizando a IDE *vscode*:
 
