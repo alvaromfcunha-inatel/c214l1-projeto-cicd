@@ -23,7 +23,15 @@ FormPDF é um criador de slides que gera o conteúdo da apresentação, informad
 $ git clone https://github.com/alvaromfcunha-inatel/c214l1-projeto.git
 ```
 - [NodeJS](https://nodejs.org/en/download/): v16.17 ou superior (recomendado [nvm](https://github.com/nvm-sh/nvm));
+  - Verificar a versão do Node pelo terminal de comando:
+```
+node -v
+```
 - *npm*: v8.15 ou superior;
+  - Verificar a versão do npm pelo terminal de comando:
+```
+npm -v
+```
 - Editor de sua escolha. Por exemplo, [VSCode](https://code.visualstudio.com/download)
 
 ### :heavy_check_mark: Como executar a aplicação?
