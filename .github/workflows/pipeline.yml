@@ -12,40 +12,34 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-
     steps:
     - uses: actions/checkout@v3
     - name: Builds project.
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}   
+        node-version: 16.x 
     - run: npm install
     - run: npm run build
     - uses: actions/upload-artifact@v3
       with:
         name: build
         path: dist/
+    - run: scripts/email.sh "c214l1-projeto-cicd - Successful Build!" ${{ vars.EMAIL }}
         
   test:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
 
     steps:
     - uses: actions/checkout@v3
     - name: Builds project.
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}   
+        node-version: 16.x
     - run: npm install
     - run: npx jest --coverage
     - uses: actions/upload-artifact@v3
       with:
         name: test
         path: coverage/
+    - run: scripts/email.sh "c214l1-projeto-cicd - Successful Tests!" ${{ vars.EMAIL }}
