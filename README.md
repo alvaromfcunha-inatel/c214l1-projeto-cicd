@@ -1,6 +1,8 @@
 <h1 align="center"> C214 - Laboratório </h1>
 <h3 align="center">:books: Projeto: FormPDF </h3>
 
+[![Node.js CI](https://github.com/alvaromfcunha-inatel/c214l1-projeto-cicd/actions/workflows/pipeline.yml/badge.svg)](https://github.com/alvaromfcunha-inatel/c214l1-projeto-cicd/actions/workflows/pipeline.yml)
+
 <p align="center">
 <img src="https://img.shields.io/static/v1?label=License&message=GPL&color=00bfff&style=plastic"/>
 
