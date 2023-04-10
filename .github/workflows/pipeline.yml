@@ -50,4 +50,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Email Notify.
-      - run: scripts/email.sh "c214l1-projeto-cicd - Successful Pipeline!" ${{ vars.EMAIL }}
+        run: scripts/email.sh "c214l1-projeto-cicd - Successful Pipeline!" ${{ vars.EMAIL }}
